@@ -1,144 +1,128 @@
-##Pentesting Proxy Tool
+# Pentesting Proxy Tool
 
 This is a versatile GUI-based proxy tool designed for penetration testing purposes. It combines proxy functionalities with additional features like vulnerability scanning, Tor routing, and request replay. The tool can intercept and analyze HTTP/HTTPS requests, replay requests, and evaluate potential security vulnerabilities.
 
-#Features
+---
 
-Intercept HTTP Requests and Responses
+## Features
 
-Logs all intercepted requests in a user-friendly GUI.
+1. **Intercept HTTP Requests and Responses**
+   - Logs all intercepted requests in a user-friendly GUI.
+   - Provides a mock response for demonstration purposes.
 
-Provides a mock response for demonstration purposes.
+2. **Basic Vulnerability Scanning**
+   - Detects potential open redirects.
+   - Identifies SQL injection patterns.
+   - Alerts on sensitive information leaks (e.g., API keys, passwords).
 
-Basic Vulnerability Scanning
+3. **Request Replayer**
+   - Replay any HTTP request directly from the GUI.
 
-Detects potential open redirects.
+4. **Tor Integration**
+   - Option to route all requests through the Tor network.
 
-Identifies SQL injection patterns.
+5. **Expandable Framework**
+   - The codebase can be extended to add custom modules for specific pentesting tasks.
 
-Alerts on sensitive information leaks (e.g., API keys, passwords).
+6. **HTTP Header Analysis** *(Coming Soon)*
+   - Future enhancement to evaluate the security of HTTP headers.
 
-Request Replayer
+---
 
-Replay any HTTP request directly from the GUI.
+## Installation Guide
 
-Tor Integration
+### Requirements
+- **System Requirements**:
+  - Python 3.x
+  - A Linux distribution or Windows (Linux recommended for Tor support)
+  - Administrator/root privileges for installing dependencies
 
-Option to route all requests through the Tor network.
+- **Dependencies**:
+  - `PyQt5` for GUI
+  - `stem` for Tor control
+  - `requests` for HTTP handling
 
-Expandable Framework
+### Installation Steps
 
-The codebase can be extended to add custom modules for specific pentesting tasks.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/pentesting-proxy-tool.git
+   cd pentesting-proxy-tool
+   ```
 
-HTTP Header Analysis (Coming Soon)
+2. Run the setup script:
+   ```bash
+   ./setup.sh
+   ```
 
-Future enhancement to evaluate the security of HTTP headers.
+   This script:
+   - Installs the necessary Python packages.
+   - Configures Tor for proxying requests.
+   - Starts the application.
 
-Installation Guide
+3. Launch the tool:
+   ```bash
+   python3 proxy_tool.py
+   ```
 
-Requirements
+---
 
-System Requirements:
+## Usage Instructions
 
-Python 3.x
+1. **Starting the Proxy**
+   - Click the `Start Proxy` button in the GUI to launch the HTTP server.
+   - Set your browser or testing tool to route traffic through `http://localhost:8080`.
 
-A Linux distribution or Windows (Linux recommended for Tor support)
+2. **Intercept Requests**
+   - As HTTP requests pass through, they are displayed in the GUI.
 
-Administrator/root privileges for installing dependencies
+3. **Analyze Vulnerabilities**
+   - Each intercepted request is scanned for vulnerabilities such as open redirects, SQL injection patterns, and sensitive data leakage.
 
-Dependencies:
+4. **Replay Requests**
+   - Click `Replay Request` to enter a URL and replay the HTTP request. The response code is displayed in a dialog box.
 
-PyQt5 for GUI
+5. **Use Tor for Anonymity**
+   - Click `Connect to Tor` to route requests through the Tor network.
 
-stem for Tor control
+---
 
-requests for HTTP handling
+## Use Cases
 
-Installation Steps
+1. **Penetration Testing**
+   - Evaluate web applications for common vulnerabilities using built-in scanning features.
 
-Clone the repository:
+2. **Web Development Debugging**
+   - Intercept requests during development to analyze and debug API calls.
 
-git clone https://github.com/yourusername/pentesting-proxy-tool.git
-cd pentesting-proxy-tool
+3. **Anonymized Browsing and Testing**
+   - Use Tor integration to anonymize HTTP requests for privacy and testing purposes.
 
-Run the setup script:
+4. **HTTP Request Replay**
+   - Modify and replay captured HTTP requests to evaluate server responses and test business logic.
 
-./setup.sh
+---
 
-This script:
+## Potential Improvements
 
-Installs the necessary Python packages.
+- **Save Logs**: Implement the ability to export logs to a file for later analysis.
+- **Custom Exploits**: Add modules for detecting more complex vulnerabilities.
+- **HTTPS Support**: Expand support for HTTPS traffic interception and decryption.
+- **Multi-Threading**: Improve server responsiveness by handling requests concurrently.
 
-Configures Tor for proxying requests.
+---
 
-Starts the application.
+## Notes
+- Use this tool responsibly and only for authorized testing purposes.
+- Ensure compliance with legal and ethical guidelines while performing penetration testing.
 
-Launch the tool:
+---
 
-python3 proxy_tool.py
+For any issues or feature requests, please open an issue on the [GitHub repository](https://github.com/yourusername/pentesting-proxy-tool).
 
-Usage Instructions
+---
 
-Starting the Proxy
+### Developer: Your Name
+- **Email**: youremail@example.com
+- **License**: MIT
 
-Click the Start Proxy button in the GUI to launch the HTTP server.
-
-Set your browser or testing tool to route traffic through http://localhost:8080.
-
-Intercept Requests
-
-As HTTP requests pass through, they are displayed in the GUI.
-
-Analyze Vulnerabilities
-
-Each intercepted request is scanned for vulnerabilities such as open redirects, SQL injection patterns, and sensitive data leakage.
-
-Replay Requests
-
-Click Replay Request to enter a URL and replay the HTTP request. The response code is displayed in a dialog box.
-
-Use Tor for Anonymity
-
-Click Connect to Tor to route requests through the Tor network.
-
-Use Cases
-
-Penetration Testing
-
-Evaluate web applications for common vulnerabilities using built-in scanning features.
-
-Web Development Debugging
-
-Intercept requests during development to analyze and debug API calls.
-
-Anonymized Browsing and Testing
-
-Use Tor integration to anonymize HTTP requests for privacy and testing purposes.
-
-HTTP Request Replay
-
-Modify and replay captured HTTP requests to evaluate server responses and test business logic.
-
-Potential Improvements
-
-Save Logs: Implement the ability to export logs to a file for later analysis.
-
-Custom Exploits: Add modules for detecting more complex vulnerabilities.
-
-HTTPS Support: Expand support for HTTPS traffic interception and decryption.
-
-Multi-Threading: Improve server responsiveness by handling requests concurrently.
-
-Notes
-
-Use this tool responsibly and only for authorized testing purposes.
-
-Ensure compliance with legal and ethical guidelines while performing penetration testing.
-
-For any issues or feature requests, please open an issue on the GitHub repository.
-
-Developer: Your Name
-
-Email: youremail@example.com
-
-License: MIT
