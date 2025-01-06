@@ -1,4 +1,4 @@
-# Pentesting Proxy Tool
+# XD Pentesting Proxy Tool
 
 This is a versatile GUI-based proxy tool designed for penetration testing purposes. It combines proxy functionalities with additional features like vulnerability scanning, Tor routing, and request replay. The tool can intercept and analyze HTTP/HTTPS requests, replay requests, and evaluate potential security vulnerabilities.
 
