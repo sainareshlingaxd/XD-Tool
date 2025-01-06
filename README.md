@@ -46,7 +46,7 @@ This is a versatile GUI-based proxy tool designed for penetration testing purpos
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pentesting-proxy-tool.git
+   git clone https://github.com/sainareshlingaxd/XD-Tool.git
    cd pentesting-proxy-tool
    ```
 
@@ -123,6 +123,6 @@ For any issues or feature requests, please open an issue on the [GitHub reposito
 ---
 
 ### Developer: Your Name
-- **Email**: youremail@example.com
+- **Email**: sainareshlinga@gmail.com
 - **License**: MIT
 
